@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2eb;
+            color: #3e5537;
+            text-align: center;
+            padding: 20px;
+            background-image: url('https://wallpaperaccess.com/full/806272.jpg'); /* Correctly set background image */
+            background-size:total; /* Ensures the background image covers the entire page */
+            background-repeat: no-repeat; /* Prevents the background image from repeating */
+            background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+        }
+        
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px; /* Adds padding inside the container */
+            border-radius: 8px; /* Rounds the corners of the container */
+            margin: auto;
+            max-width: 800px; /* Limits the width of the container */
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .learn-more-btn {
+            background-color: #1b9959;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #158e51;
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            position: relative;
+            z-index: 1;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav.before.active-element {
+            transform: rotateY(180deg);
+        }
+
+        #menuToggle {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left:-30px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+            user-select: none;
+        }
+
+        #menuToggle span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: #cdcdcd;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: all 0.5s ease;
+        }
+
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+
+        #menuToggle input:checked ~ span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(2) {
+            opacity: 1;
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menu {
+            position: absolute;
+            width: 150px;
+            margin: -150px 0 0 -150px;
+            padding: 50px;
+            padding-top: 125px;
+            background-image: url("https://wallpaperaccess.com/full/806272.jpg");
+            list-style-type: none;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s ease;
+        }
+
+        #menu li {
+            padding: 10px 0;
+            font-size: 22px;
+        }
+        
+        
+
+        #menuToggle input:checked ~ ul {
+            transform: none;
+        }
+    </style>
+</head>
+<body id="6">
+    <div class="container">
+
+        <div id="menuToggle" style="color: black;">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu" style="color: azure;">
+                <a href="#6" style="color: azure;" ><li>Home</li></a>
+                <a href="#1" style="color: azure;" ><li>About me</li></a>
+                <a href="#2" style="color: azure;" ><li> My Services</li></a>
+                <a href="#4" style="color: azure;" ><li>Contact me</li></a>
+            </ul>
+        </div>
+    
+        <h1>MY PORTFOLIO</h1>
+        
+        <div class="profile-pic">
+            <img src="c:\Users\shanm\OneDrive\Desktop\my web pages\IMG_0142.JPG" alt="Profile Picture">
+        </div>
+        <h1 id="1">ABOUT ME</h1>
+        <p>Meet Shanmukh, a skilled programmer with expertise in C++, C, Python, HTML, and CSS. Shanmukh delivers top-notch solutions to clients across various industries.</p>
+        <button class="learn-more-btn">Learn More</button>
+
+        <h1 id="2">MY SERVICES</h1>
+        <a><img src="c:\Users\shanm\OneDrive\Desktop\my web pages\WhatsApp Image 2024-08-24 at 21.02.29_e0ded7d8.jpg" class="code" alt="Services Image"></a>
+        <h1>HTML AND CSS</h1>
+        <p>I'm highly proficient in HTML and CSS, with years of experience in web development. I can design and develop websites to meet my clients' needs.</p>
+        <h1>C++</h1>
+        <p>I am a proficient C++ programmer with extensive experience in developing complex software applications. I write clean, efficient, and maintainable code to deliver high-quality software solutions to my clients.</p>
+        <h1>PYTHON</h1>
+        <p>I excel in Python programming. With extensive experience, I write clean, efficient code for web development, data analysis, and machine learning.</p>
+    
+        <hr>
+        <h2 id="4">Contact me:</h2>
+        <p>Phone: 7799899470</p>
+        <p>Email: shanmukhsainathsunku@gmail.com</p>
+        <h2>Address</h2>
+        <p>Kalasalingam University</p>
+        <p>Krishan Kovil, Virudhunagar Dist;</p>
+        <p>626126.</p>
+    </div>
+</body>
+</html>
